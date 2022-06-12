@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>walletApp</title>
+    <link rel="stylesheet" href="qrcode.css">
+    <script defer src="login.js"></script>
+   
+</head>
+
+<body>
+    <h1 style="text-align:center ;">Wallet App</h1>
+    <h2 style="text-align:center ;">Pay using Qr Code</h2>
+    <a href="login.html" class="curves">back</a> <br> <br>
+    <button id="generate" class="curve">genrate qr code</button> <br> <br>
+    <script src=
+    "https://code.jquery.com/jquery-3.5.1.js">
+  </script>
+  
+  <script>
+    // Function to HTML encode the text
+    // This creates a new hidden element,
+    // inserts the given text into it 
+    // and outputs it out as HTML
+    function htmlEncode(value) {
+      return $('<div/>').text(value)
+        .html();
+    }
+  
+    $(function () {
+  
+      // Specify an onclick function
+      // for the generate button
+      $('#generate').click(function () {
+  
+        // Generate the link that would be
+        // used to generate the QR Code
+        // with the given data 
+        let finalURL =
+'https://chart.googleapis.com/chart?cht=qr&chl=' +
+          htmlEncode($('#content').val()) +
+          '&chs=160x160&chld=L|0'
+  
+        // Replace the src of the image with
+        // the QR code image
+        $('.qr-code').attr('src', finalURL);
+      });
+    });
+  </script>
+  <div>
+  <img src=
+  "https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+          class="qr-code img-thumbnail img-responsive" />
+</div>
+</body>
+
+</html>
