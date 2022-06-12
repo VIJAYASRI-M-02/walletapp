@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+html, body{
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 0.1em;
+	font-size: 0.98em;  
+  /*min-height: 100%;*/
+  background-image: url(walletsign.webp);
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 20px;
+    width: 50%;
+    height:50%;
+    object-fit: contain;
+}
+body{
+    text-align: center;
+}
+  .curve {
+    background: #0069eb;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    padding: 10px 25px;
+    text-decoration: none;
+ }
+
+ .forgot,
+ .register {
+     margin:10px;
+     clear:left;
+     display:inline-block;
+     color:#0069eb;
+     font-weight:bold;
+     text-decoration:none;
+ }
+ .curves {
+    background: #0069eb;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+ }
